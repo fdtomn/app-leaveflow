@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="processEngineConfiguration" class="org.activiti.engine.impl.cfg.StandaloneProcessEngineConfiguration">
+		
+		<!-- 数据库连接配置 -->
+		<property name="jdbcDriver" value="oracle.jdbc.driver.OracleDriver"></property>
+		<property name="jdbcUrl" value="jdbc:oracle:thin:@oracle:1521/jiagulun"></property>
+		<property name="jdbcUsername" value="activiti"></property>
+		<property name="jdbcPassword" value="activiti"></property>
+		
+		<!-- 建表策略 -->
+		<property name="databaseSchemaUpdate" value="true"></property>
+		
+	</bean>
+
+</beans>
